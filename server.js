@@ -17,15 +17,28 @@ app.use(session({
 app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs');
 app.get('/', function(request, response) {
-    response.render('index');
+    var lang_list = ["Python","C#", "JavaScript"];
+    var dojo_list = ["Seattle", "San Jose", "DC"];
+    response.render('index', {lang : lang_list, dojo : dojo_list});
 })
 app.post('/process', function(request, response) {
     console.log(request.body);
+    request.session.name = request.body.name;
+    request.session.dojo = request.body.dojo;
+    request.session.lang = request.body.lang;
+    request.session.comment = request.body.comment;
+    request.session.save();
     response.redirect('/result');
 })
 
 app.get('/result', function(request,response) {
-    response.render('result');
+    var context = {
+        name : request.session.name, 
+        dojo : request.session.dojo,
+        lang : request.session.lang,
+        comment : request.session.comment,
+    }
+    response.render('result', context);
 })
 
 app.listen(8000, function() {

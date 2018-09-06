@@ -1,0 +1,16 @@
+div{
+    display: block;
+    background-color: rgb(52, 201, 89);
+    color: white;
+    width:50%;
+    margin-left:25%;
+    text-align: center;
+    border: 5px groove silver;
+    box-shadow: 1px 3px black;
+    text-shadow: 1px 2px gray;
+}
+h1{
+    text-decoration: underline;
+    font-size: 35px;
+    font-family: cursive;
+}

@@ -1,0 +1,36 @@
+* {
+    margin: 0px auto !important;
+    padding: 0px !important;
+
+}
+#container{
+    width:25% !important;
+    height: auto !important;
+    padding: 5px !important;
+    margin-left: 35% !important;
+    border-radius: 5%;
+    background-color: rgb(50, 171, 252) !important;
+}
+span {
+    display: inline !important;
+    text-align: left !important;
+    
+}
+div{
+    margin-top:15px !important;
+}
+#dojo{
+    width:152px !important;
+}
+#lang{
+    width:120px !important;
+}
+#button{
+    display: block !important;
+    background: light gray !important;
+    border: 2px solid white !important;
+    color: white !important;
+    width:100px !important;
+    height:30px !important;
+    margin-top: 5px !important;
+}
